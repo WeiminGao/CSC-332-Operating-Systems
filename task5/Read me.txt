@@ -1,0 +1,14 @@
+*****CSc332-task5-Weimin Gao*****
+
+A.
+There have two code: fork-and-thread.c and fork-and-thread-without-semaphor.c
+After complie and run both codes, we can see that if we don't add a semaphore, it shows error
+(Segmentatiom fault (core dumped)). 
+1) So we need to add a semaphore to protect the memory object.
+2) And there are not deadlock condition with this solution.
+
+B.
+For complie this code, you need enter -> gcc -o shm-thread shm-thread.c -lpthread -lrt, 
+then enter -> ./shm-thread to run code.
+1) This solution does not require a mutex or semaphore.
+2) The producer and consumer threads can write to the file at the same time
